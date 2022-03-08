@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:takealong/controller/tag/get_started_button_custom.dart';
 
 class Android14 extends StatefulWidget {
   const Android14({
@@ -17,20 +18,6 @@ class _Android14 extends State<Android14> {
     return Material(
       color: Colors.white,
       child: Stack(children: [
-        Positioned(
-          left: 59.0,
-          width: 251.0,
-          top: 470.0,
-          height: 54.0,
-          child: Container(
-            width: 251.000,
-            height: 54.000,
-            decoration: BoxDecoration(
-              color: Color(0xffc4c4c4),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-            ),
-          ),
-        ),
         Positioned(
           left: 154.0,
           width: 156.0,
@@ -84,46 +71,83 @@ class _Android14 extends State<Android14> {
           ]),
         ),
         Positioned(
-          left: 59.0,
-          width: 251.0,
-          top: 595.0,
+          left: MediaQuery.of(context).size.width * 0.164,
+          width: MediaQuery.of(context).size.width * 0.697,
+          bottom: 32.0,
           height: 13.0,
-          child: Container(
-              width: 251.000,
-              height: 13.000,
-              child: AutoSizeText(
-                'Powered By: SIT Technology Nigeria',
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                  fontStyle: FontStyle.normal,
-                  letterSpacing: 0,
-                  color: Color(0xff8e8e8e),
-                ),
-                textAlign: TextAlign.center,
-              )),
+          child: Center(
+              child: Container(
+                  width: 251.000,
+                  height: 13.000,
+                  child: AutoSizeText(
+                    'Powered By: SIT Technology Nigeria',
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      fontStyle: FontStyle.normal,
+                      letterSpacing: 0,
+                      color: Color(0xff8e8e8e),
+                    ),
+                    textAlign: TextAlign.center,
+                  ))),
         ),
         Positioned(
-          left: 87.0,
-          width: 186.0,
-          top: 490.0,
-          height: 14.0,
-          child: Container(
-              width: 186.000,
-              height: 14.000,
-              child: AutoSizeText(
-                'Get Started ',
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.normal,
-                  letterSpacing: 0,
-                  color: Colors.black,
+          left: 59.0,
+          width: 251.0,
+          top: 470.0,
+          height: 54.0,
+          child: GetStartedButtonCustom(
+              child: Stack(children: [
+            Positioned(
+              left: 0,
+              width: 251.0,
+              top: 0,
+              height: 54.0,
+              child: Container(
+                width: 251.000,
+                height: 54.000,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(0)),
                 ),
-                textAlign: TextAlign.center,
-              )),
+              ),
+            ),
+            Positioned(
+              left: 0,
+              width: 251.0,
+              top: 0,
+              height: 54.0,
+              child: Container(
+                width: 251.000,
+                height: 54.000,
+                decoration: BoxDecoration(
+                  color: Color(0xffc4c4c4),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 28.0,
+              width: 186.0,
+              top: 20.0,
+              height: 14.0,
+              child: Container(
+                  width: 186.000,
+                  height: 14.000,
+                  child: AutoSizeText(
+                    'Get Started ',
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 15,
+                      fontWeight: FontWeight.w700,
+                      fontStyle: FontStyle.normal,
+                      letterSpacing: 0,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  )),
+            ),
+          ])),
         ),
       ]),
     );
